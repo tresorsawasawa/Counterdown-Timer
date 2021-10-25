@@ -6,6 +6,10 @@
 }
 
 body {
-    background-image: url(https://unsplash.com/photos/duo-xV0TU7s);
+    background-image: url("/img/bcground.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    min-height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
