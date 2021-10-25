@@ -10,6 +10,36 @@ body {
     background-size: cover;
     background-position: center center;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-transform: capitalize;
+    margin-top: -12rem;
+}
+
+.container {
+    background-color: aqua;
+    display: flex;
+}
+
+.big-text {
+    font-size: 5rem;
+    line-height: 1;
+    margin: 0 32px;
+}
+
+.countdown-el {
+    text-align: center;
+}
+
+.countdown-el span {
+    font-size: 20px;
+    text-transform: capitalize;
 }
