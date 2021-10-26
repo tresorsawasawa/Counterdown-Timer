@@ -1,4 +1,4 @@
-const countDownDate = new Date("Oct 26, 2021 12:10:10"),
+const countDownDate = new Date("Oct 26, 2021 13:42:10"),
     daysEl = document.getElementById("days"),
     minutesEl = document.getElementById("minutes"),
     hoursEl = document.getElementById("hours"),
@@ -38,8 +38,13 @@ function setCountDown() {
         document.getElementById("end").innerHTML = "D";
     }
 }
-setCountDown();
 
 function formatTime(time) {
-    return time < 10 ? '0${time}' : time
+    if (time < 10) {
+        return `0${time}`;
+    } else {
+        return time
+    }
 }
+
+setCountDown();
