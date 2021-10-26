@@ -1,3 +1,5 @@
-setInterval(setCountdown, 1000);
+const eveDate = "Nov 22, 2021 8:55:59";
 
-let countDownDate =  newDate("Nov 22, 2021 8:55:59").getTime();
+function countdown() {
+    const startDate = new Date()
+}
