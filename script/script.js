@@ -1,4 +1,4 @@
-const countDownDate = new Date("Oct 26, 2021 13:42:10"),
+const countDownDate = new Date("Nov 22, 2021 9:55:0"),
     daysEl = document.getElementById("days"),
     minutesEl = document.getElementById("minutes"),
     hoursEl = document.getElementById("hours"),
