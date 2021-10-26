@@ -24,7 +24,8 @@ function setCountDown() {
         document.getElementById("days").innerHTML = "E";
         document.getElementById("hours").innerHTML = "N";
         document.getElementById("minutes").innerHTML = "D";
-        document.getElementById("seconds").innerHTML = "ED";
+        document.getElementById("seconds").innerHTML = "E";
+        document.getElementById("end").innerHTML = "D";
     }
 }
 
