@@ -1,4 +1,8 @@
-const countDownDate = new Date("Oct 26, 2021 12:10:10");
+const countDownDate = new Date("Oct 26, 2021 12:10:10"),
+    daysEl = document.getElementById("days"),
+    minutesEl = document.getElementById("minutes"),
+    hoursEl = document.getElementById("hours"),
+    secondsEl = document.getElementById("seconds");
 
 let interval = setInterval(setCountDown, 1000);
 
@@ -12,13 +16,12 @@ function setCountDown() {
         minutes = Math.floor((distance % (milli * 3600)) / (1000 * 60)),
         seconds = Math.floor((distance % (milli * 60)) / 1000);
 
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
+    daysEl.innerHTML = days;
+    minutesEl.innerHTML = formatTime(hours);
+    hoursEl.innerHTML = formatTime(minutes);
+    secondsEl.innerHTML = formatTime(seconds);
 
     if (distance < 0) {
-
         clearInterval(interval);
 
         // Delete span elements
@@ -35,5 +38,8 @@ function setCountDown() {
         document.getElementById("end").innerHTML = "D";
     }
 }
-
 setCountDown();
+
+function formatTime(time) {
+    return time < 10 ? '0${time}' : time
+}
