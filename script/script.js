@@ -19,8 +19,13 @@ function setCountDown() {
     document.getElementById("seconds").innerHTML = seconds;
 
     if (distance < 0) {
+
         clearInterval(interval);
-        // deadline = document.getElementById("days").innerHTML = document.getElementById("hours").innerHTML = document.getElementById("minutes").innerHTML = document.getElementById("seconds").innerHTML = "EXPIRED"
+        document.querySelector("#hide").style.display = "none";
+        document.querySelector("#hide1").style.display = "none";
+        document.querySelector("#hide2").style.display = "none";
+        document.querySelector("#hide3").style.display = "none";
+        document.querySelector("#hide4").style.display = "none";
         document.getElementById("days").innerHTML = "E";
         document.getElementById("hours").innerHTML = "N";
         document.getElementById("minutes").innerHTML = "D";
