@@ -1,6 +1,7 @@
-const countDownDate = new Date("Nov 22, 2021 9:55:59");
+const countDownDate = new Date("Oct 26, 2021 12:10:10");
 
-setInterval(setCountDown, 1000);
+let interval = setInterval(setCountDown, 1000),
+    deadline = "EXPIRED";
 
 function setCountDown() {
     let now = new Date().getTime(),
@@ -16,5 +17,15 @@ function setCountDown() {
     document.getElementById("hours").innerHTML = hours;
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
+
+    if (distance < 0) {
+        clearInterval(interval);
+        // deadline = document.getElementById("days").innerHTML = document.getElementById("hours").innerHTML = document.getElementById("minutes").innerHTML = document.getElementById("seconds").innerHTML = "EXPIRED"
+        document.getElementById("days").innerHTML = "E";
+        document.getElementById("hours").innerHTML = "N";
+        document.getElementById("minutes").innerHTML = "D";
+        document.getElementById("seconds").innerHTML = "ED";
+    }
 }
+
 setCountDown();
